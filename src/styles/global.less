@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: Avenir, Helvetica, Arial, sans-serif;;
+}
+
+#app {
+  height: 100%;
+}
+
+
+.glo-content-area {
+  padding: @padding-ver @padding-hov;
+  background-color: @clr-white;
+  box-sizing: border-box;
+}
+.glo-search-area {
+  .clearfix();
+  padding: 0 @padding-hov @padding-ver;
+  background-color: @clr-white;
+  box-sizing: border-box;
+  .widget-item {
+    .clearfix();
+    float: left;
+    margin-right: @padding-hov * 2;
+
+    .widget-label {
+      // float: left;
+      line-height: 36px;
+    }
+
+    .ivu-select {
+      min-width: 120px;
+    }
+  }
+}
+.glo-selection {
+  padding: 0 @padding-hov @padding-ver;
+  background-color: @clr-white;
+  box-sizing: border-box;
+  .ivu-alert {
+    margin-bottom: 0;
+    padding-right: @padding-hov;
+    border-radius: 2px;
+    line-height: 1.4;
+    font-weight: 400;
+  }
+  .glo-selection-clean {
+    float: right;
+  }
+}
+.glo-pagenation {
+  text-align: right;
+}
+.glo-btn-group {
+  .clearfix();
+  .ivu-btn {
+    float: left;
+    margin-right: @padding-hov;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.glo-clearfix {
+  .clearfix();
+}
+.glo-clear-after {
+  clear: right;
+}
+.glo-nowrap{
+  .nowrap()
+}
+body {
+  min-width: 1366px;
+  height: 100%;
+  font-family: "Microsoft YaHei", 'Avenir', Helvetica, Arial, sans-serif;
+  color: #666;
+  font-size: 13px;
+  overflow: hidden;
+  padding-right: 0 !important;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+ul,
+ol {
+    list-style: none;
+}
+
+.hidden {
+    display: none!important;
+}
+
+.text-right {
+    text-align: right
+}
+
+.text-center {
+    text-align: center
+}
+
+.pull-left {
+    float: left;
+}
+
+.pull-right {
+    float: right;
+}
+.p20{
+  font-size: 20px;
+}

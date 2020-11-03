@@ -1,0 +1,20 @@
+.clearfix () {
+  &:before,
+  &:after {
+    content: '';
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.nowrap() {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.wrap() {
+  word-break: break-all;
+  white-space: pre-wrap;
+}
