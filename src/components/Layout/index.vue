@@ -48,7 +48,7 @@
 
       </el-aside>
       <el-main>
-        <bbb :msg.sync="list"></bbb>
+        <bbb :msg.sync="list" @hook:updated="$_handleSelectUpdated"></bbb>
         <div @click="up">上</div>
         <div @click="down">下</div>
         <slot />
@@ -133,6 +133,12 @@ export default {
   },
 
   methods: {
+    $_handleSelectUpdated() {
+      console.log('custom-select组件的updated钩子函数被触发')
+    },
+    updatedA(){
+      console.log('监听到啦hook')
+    },
 
     up(index) {
         if(index === 0) {

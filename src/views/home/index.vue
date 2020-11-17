@@ -1,82 +1,38 @@
 <template lang="">
-    <div @click="bbb">
-        我是home首页123456 11456 {{$log(aa)}}
-    <p v-html="valueLog"></p>
+    <div>
+        我是home首页123456 11456 {{$log(aa)}}{{num}}
+        <p v-html="valueLog"></p>
 
+
+        <div @click="add">点击++</div>
+        <!-- 监听子组件的生命周期 -->
+        <dev :msg="aa"  @hook:updated="updatedA"></dev>
     </div>
+    
     <!-- <div v-html="valueLog"></div> -->
 </template>
 <script>
+import dev from '@/components/ccc';
+
 export default {
+    components: {
+        dev
+    },
     data(){
         return {
             aa:'homehomehomehomehomehomehome',
             valueLog:'',
+            num:1,
         }
     },
     created(){
-        function reverseStr(str = "") {
-            return str.split("").reduceRight((t, v) =>{
-                return t + v
-            },'10086');
-        }
-        const str = "reduce123";
-        console.log(reverseStr(str)); // "321recuder"
-        const num=5;
-        console.log(!!(num & 1))
-        console.log(!!(num % 2))
-
-
-        console.log('!null====',!null)
-        console.log('!undefined====',!undefined)
-        console.log("!''====",!'')
-        console.log("!100====",!100)
-        console.log("!'abc'====",!'abc')
-
-        var a=false ;
-        if(!!a){
-            console.log('我进来啦')
-        }else{
-            console.log(a instanceof Boolean)
-            console.log('我没有进来')
-        }
-        console.log((num & 1))
-        console.log((num % 2))
-
-
         
-        // sum(1, 2)
-
-        // const sum = function (a, b) {
-        // return a + b
-        // }
-
-
-
-        const printNumbers = {
-            phrase: 'The current value is:',
-            numbers: [1, 2, 3, 4],
-
-            loop(){
-                this.numbers.forEach((number) => {
-                console.log(this.phrase, number)
-                })
-            },
-        }
-        printNumbers.loop()
-
-        console.log(printNumbers.loop.prototype)
-
-        let func = ()=>{};
-        console.log(func.prototype)
-        const myArrowFunction = () => {}
-        console.log(myArrowFunction.prototype)
-        const arrowInstance = new myArrowFunction()
-        console.log(arrowInstance)
-
 
     },
     methods:{
+        updatedA(){
+            console.log('你说我执行啦吗')
+        },
         aab () {
             this.aab = ()=>{
                 console.log(2222)
@@ -88,11 +44,24 @@ export default {
         },
         upData (arr, index) {
             console.log('555')
-        }
+        },
+        add(){
+            this.num++;
+        },
     },
     mounted(){
-
+        console.log('我可是挂载哇')
+        this.$once('hook:beforeDestroy',()=>{
+            console.log('我可是监听到啦销毁哇')
+        })
     },
+    updated(){
+        console.log('我变化啦他也耶耶耶')
+    },
+    beforeDestroy(){
+        console.log('我被销毁啦')
+    }
+
 }
 </script>
 <style  scope>

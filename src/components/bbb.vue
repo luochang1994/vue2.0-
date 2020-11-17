@@ -1,6 +1,8 @@
 <template>
   <div class="hello">
-    <h1>{{ msg1.goodsName }}123456</h1>
+    <h1>{{ msg1.goodsName }}123456=========</h1>
+
+        <div @click="add">点击++{{num}}</div>
 
   </div>
 </template>
@@ -15,6 +17,11 @@ export default {
   props: {
     msg1: Object,
   },
+  data(){
+        return {
+            num:1,
+        }
+    },
   mounted() {
 
 
@@ -28,7 +35,13 @@ export default {
         usernames: '',
       })
     },
+    add(){
+      this.num++
+    },
   },
+  updated(){
+    console.log('我更新啦')
+  }
 };
 </script>
 
