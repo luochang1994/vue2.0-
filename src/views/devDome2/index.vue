@@ -1,6 +1,12 @@
 <template lang="">
     <div>
-        123456第二个页面个人什么鬼
+        123456第二个页面个人什么鬼devDome2
+        devDome2
+        devDome2
+        devDome2
+        devDome2
+        devDome2
+        
     </div>
 </template>
 <script>

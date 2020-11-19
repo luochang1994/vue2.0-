@@ -6,6 +6,8 @@ import dev from '../views/dev/index.vue'
 import dome from '../views/dome/index.vue'
 import home from '../views/home/index.vue'
 import devDome2 from '../views/devDome2/index.vue'
+import egg from '../views/egg/index.vue'
+import body from '../views/body/index.vue'
 
 
 const originalPush = VueRouter.prototype.push
@@ -51,6 +53,7 @@ const routes = [
         components:{
           default: home,
           'dome': home,
+          'two':dome
         },
       },
       {
@@ -60,11 +63,12 @@ const routes = [
         // component: () => import('@/views/dev/index.vue'),
         // component: () => import('@/views/dev/index.vue'),
         // 定制化一个路由根据权限指向不同的页面  通过name配置
-        // <router-view  name="dome"/>
+        // <router-view  name="dome"/>  //wrapper.vue文件配置
         // 好像使用啦路由name以后components和component引入方式不可以同时使用
         components:{
           default: dev,
           'dome': dev,
+          'two':egg
         },
       },
       {
@@ -75,7 +79,7 @@ const routes = [
         components:{
           default: devDome2,
           'dome': devDome2,
-          
+          'two':body
         },
       },
     ],

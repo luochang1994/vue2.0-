@@ -1,11 +1,14 @@
 <template lang="">
     <div class='devClass'>
-        我是第一个页面的dome设置devdevdevdevdevdevdevdevdevdevdevdevdevdev
-        dev
-        dev
-        dev
-        dev
-        dev============
+        我是第一个页面的dome设置egg
+        egg
+        egg
+        egg
+        egg
+        egg
+        egg============
+        egg
+        egg
 
     </div>
 </template>
