@@ -4,7 +4,7 @@
         <p v-html="valueLog"></p>
 
 
-        <div @click="add">点击++</div>
+        <div @click="add">点击++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</div>
         <!-- 监听子组件的生命周期 -->
         <dev :msg="aa"  @hook:updated="updatedA"></dev>
     </div>
@@ -13,6 +13,8 @@
 </template>
 <script>
 import dev from '@/components/ccc';
+import {similarity,outOfNum} from '@/utils/auth.js'
+
 
 export default {
     components: {
@@ -26,8 +28,7 @@ export default {
         }
     },
     created(){
-        
-
+        console.log('我是home')
     },
     methods:{
         updatedA(){

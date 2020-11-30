@@ -3,7 +3,7 @@
     <!-- // 定制化一个路由根据权限指向不同的页面  通过name配置 -->
     <!-- <router-view/> -->
 
-    <router-view  name="two"/>
+    <router-view  name="dome"/>
   </Layout>
 </template>
 
